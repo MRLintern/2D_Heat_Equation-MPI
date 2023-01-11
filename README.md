@@ -49,17 +49,12 @@ and then communicate the results with the master (global domain). This [link](ht
 ## Running the Application
 
 Once the application has been compiled, use the MPI script, `mpirun` script along the the number of processors you wish to use at the command line.
-Note: there are a few options. That is, the initial temperature distribution can be added, spacial dimementions of the temperature distribution and the and the number of time steps.
-I.E.
+Note: there are a few options. That is, the initial temperature distribution can be added, spacial dimementions of the temperature distribution and the and the number of time steps. Below shows that 4 processors are used, the initial temperature data is being used along with a 800 x 800 grid with 1000 time steps.
 
-  *`$ mpirun -np 4 ./main_heat`. Default.
-  *`$ mpirun -np 4 ./main_heat bottle.dat`. Include the initial temperature distribution of the bottle.
-  *`$ mpirun -np 4 ./main_heat bottle.dat 1000`. The above but includes the number of time steps.
-  *`$ mpirun -np 4 ./main_heat bottle.dat 800 800 1000`. The above but now includes the dimmensions of the initial heat distribution
 
   * `$ git clone http://github/MRLintern/2D_Heat_Equation-MPI.git`
   * `$ make`
-  * `$ mpirun -np ./main_heat`
+  * `$ mpirun -np ./main_heat bottle.dat 800 800 1000`
 
 
 
