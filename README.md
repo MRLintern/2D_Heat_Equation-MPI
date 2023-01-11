@@ -1,4 +1,4 @@
-## 2D-Heat-Equation_OpenMP
+## 2D_Heat_Equation-MPI
 
 ## Introduction
 
