@@ -12,14 +12,15 @@
 ## Introduction
 ---
 
-2D Heat Equation for a bottle. Solution found by parallelising the linear system of algebraic equations with MPI.
-The bottle has an intial temperature distrubution: data for this can be found in `bottle.dat`. 
-The end result after running the application will give the temperature at a certain point in the distribution.
+* We model the __2D Heat Equation__ for a bottle.
+* The Solution is found by __parallelising__ the __linear system__ of __algebraic equations__ with __MPI__.
+* The bottle has an __intial temperature__ distrubution: data for this can be found in `bottle.dat`. 
+* The end result after running the application will give the temperature at a certain point in the distribution.
 
 ## Scenario
 ---
 
-The diagram below shows the general form taken by a 2D heat distribution:
+* The diagram below shows the general form taken by a 2D heat distribution:
 
                             I = 0
                             
@@ -31,17 +32,16 @@ The diagram below shows the general form taken by a 2D heat distribution:
               
                             I = M-1
                             
-This diagram will prove very useful so refer to it.
-Solution to the heat-equation:
+* This diagram will prove very useful so refer to it.
+* Solution to the heat-equation:
 
-      u(Central) = (1/4)*([u(North] + u[South] + u[East] + u[West])
+      `u(Central) = (1/4)*([u(North] + u[South] + u[East] + u[West])`
 
 ## Background: Parallel Programming
 ---
 
-The parallel strategy used is Domain Decomposition.
-The problem (global domain) is decomposed into smaller domains (processes). "Workers" in the subdomains perform the calculations
-and then communicate the results with the master (global domain). This [link](https://www.mcs.anl.gov/research/projects/mpi/tutorial/mpiexmpl/src2/io/C/main.html) provides a basic example behind the Master/Slave concept.
+* The __parallel strategy__ used is __Domain Decomposition__.
+* The problem (__global domain__) is decomposed into __smaller domains__ (__processes__). __"Workers"__ in the __subdomains__ perform the calculations and then __communicate__ the results with the __master__ (__global domain__). This [link](https://www.mcs.anl.gov/research/projects/mpi/tutorial/mpiexmpl/src2/io/C/main.html) provides a basic example behind the Master/Slave concept.
 
 ## Running the Application
 ---
